@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #222;
+  color: white;
+}
+
+.dp {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* chat */
+#chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* messages */
+.message {
+  padding: 10px 14px;
+  margin: 5px;
+  border-radius: 20px;
+  max-width: 75%;
+}
+
+.user {
+  align-self: flex-end;
+  background: linear-gradient(45deg, #ff00cc, #ff8800);
+  color: white;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #262626;
+  color: white;
+}
+
+.meme-img {
+  max-width: 250px;
+  border-radius: 15px;
+}
+
+/* input */
+.input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #222;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+button {
+  margin-left: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  background: linear-gradient(45deg, #ff00cc, #ff8800);
+  color: white;
+  border: none;
+}
