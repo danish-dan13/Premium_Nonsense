@@ -62,12 +62,19 @@ IMPORTANT:
 
     console.log("Groq:", data);
 
-    let reply =
-      data.choices?.[0]?.message?.content?.trim();
+    let reply = data.choices?.[0]?.message?.content?.trim();
 
+    // 🚨 if API error
+    if (data.error) {
+      console.log("Groq ERROR:", data.error);
+
+      reply = "bhai server thoda overloaded hai 😭 baad mein try kar";
+  }
+
+    // 🚨 if empty response
     if (!reply) {
-      reply = "abe kuch interesting bol na 😭";
-    }
+      reply = "bhai server thoda overloaded hai 😭 baad mein try kar";
+  }
 
     // 🧠 save bot reply
     chatHistory.push({
